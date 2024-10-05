@@ -1,0 +1,23 @@
+{
+  "name": "ecs-exporter-cdk",
+  "version": "0.1.0",
+  "bin": {
+    "ecs-exporter-cdk": "bin/ecs-exporter-cdk.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "cdk": "cdk"
+  },
+  "devDependencies": {
+    "@types/node": "22.5.4",
+    "aws-cdk": "2.160.0",
+    "prettier": "3.3.3",
+    "tsx": "4.19.1",
+    "typescript": "~5.6.2"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "2.160.0",
+    "constructs": "^10.0.0"
+  }
+}
