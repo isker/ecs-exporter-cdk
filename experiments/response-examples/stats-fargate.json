@@ -1,0 +1,110 @@
+{
+  "read": "2024-10-07T04:37:46.471712938Z",
+  "preread": "2024-10-07T04:37:36.471930674Z",
+  "pids_stats": {},
+  "blkio_stats": {
+    "io_service_bytes_recursive": [],
+    "io_serviced_recursive": [],
+    "io_queue_recursive": [],
+    "io_service_time_recursive": [],
+    "io_wait_time_recursive": [],
+    "io_merged_recursive": [],
+    "io_time_recursive": [],
+    "sectors_recursive": []
+  },
+  "num_procs": 0,
+  "storage_stats": {},
+  "cpu_stats": {
+    "cpu_usage": {
+      "total_usage": 24879513,
+      "percpu_usage": [
+        4564826,
+        20314687
+      ],
+      "usage_in_kernelmode": 10000000,
+      "usage_in_usermode": 20000000
+    },
+    "system_cpu_usage": 1336810000000,
+    "online_cpus": 2,
+    "throttling_data": {
+      "periods": 0,
+      "throttled_periods": 0,
+      "throttled_time": 0
+    }
+  },
+  "precpu_stats": {
+    "cpu_usage": {
+      "total_usage": 24879513,
+      "percpu_usage": [
+        4564826,
+        20314687
+      ],
+      "usage_in_kernelmode": 10000000,
+      "usage_in_usermode": 20000000
+    },
+    "system_cpu_usage": 1316870000000,
+    "online_cpus": 2,
+    "throttling_data": {
+      "periods": 0,
+      "throttled_periods": 0,
+      "throttled_time": 0
+    }
+  },
+  "memory_stats": {
+    "usage": 4374528,
+    "max_usage": 4907008,
+    "stats": {
+      "active_anon": 0,
+      "active_file": 0,
+      "cache": 0,
+      "dirty": 0,
+      "hierarchical_memory_limit": 536870912,
+      "hierarchical_memsw_limit": 9223372036854771712,
+      "inactive_anon": 3919872,
+      "inactive_file": 0,
+      "mapped_file": 0,
+      "pgfault": 3201,
+      "pgmajfault": 0,
+      "pgpgin": 2244,
+      "pgpgout": 1230,
+      "rss": 3919872,
+      "rss_huge": 0,
+      "total_active_anon": 0,
+      "total_active_file": 0,
+      "total_cache": 0,
+      "total_dirty": 0,
+      "total_inactive_anon": 3919872,
+      "total_inactive_file": 0,
+      "total_mapped_file": 0,
+      "total_pgfault": 3201,
+      "total_pgmajfault": 0,
+      "total_pgpgin": 2244,
+      "total_pgpgout": 1230,
+      "total_rss": 3919872,
+      "total_rss_huge": 0,
+      "total_unevictable": 0,
+      "total_writeback": 0,
+      "unevictable": 0,
+      "writeback": 0
+    },
+    "limit": 9223372036854771712
+  },
+  "name": "ecs-exporter",
+  "id": "e5bbdcd1cbd54d56b49a34084200ccd5-4159844948",
+  "networks": {
+    "eth1": {
+      "rx_bytes": 9045132,
+      "rx_packets": 1797,
+      "rx_errors": 0,
+      "rx_dropped": 0,
+      "tx_bytes": 161588,
+      "tx_packets": 591,
+      "tx_errors": 0,
+      "tx_dropped": 0
+    }
+  },
+  "network_rate_stats": {
+    "rx_bytes_per_sec": 0,
+    "tx_bytes_per_sec": 7.000152401017938
+  }
+}

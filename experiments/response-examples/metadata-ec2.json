@@ -1,0 +1,54 @@
+{
+  "Cluster": "prom-ecs-exporter-sandbox",
+  "TaskARN": "arn:aws:ecs:us-east-1:829490980523:task/prom-ecs-exporter-sandbox/d0b6296da9ab4519954834832299111c",
+  "Family": "prom-ecs-exporter-sandbox-isker-ec2",
+  "Revision": "5",
+  "DesiredStatus": "RUNNING",
+  "KnownStatus": "RUNNING",
+  "PullStartedAt": "2024-10-07T04:51:03.022776526Z",
+  "PullStoppedAt": "2024-10-07T04:51:03.076378833Z",
+  "AvailabilityZone": "us-east-1a",
+  "LaunchType": "EC2",
+  "Containers": [
+    {
+      "DockerId": "a0ad61dee95c0835e657498fb5063576e22347f17acb0e89811c29efa796e853",
+      "Name": "ecs-exporter",
+      "DockerName": "ecs-prom-ecs-exporter-sandbox-isker-ec2-5-ecs-exporter-f48b8ba3e98eae890300",
+      "Image": "829490980523.dkr.ecr.us-east-1.amazonaws.com/cdk-hnb659fds-container-assets-829490980523-us-east-1:c0d5c0d463c2632d80bf4ce80424b19ffde45d1ccf3b2727886ed0111c20478e",
+      "ImageID": "sha256:65e6f9039dc85bdcacb8a669db32c5287e3893951200e436c073c4a8f00a5e4e",
+      "Labels": {
+        "com.amazonaws.ecs.cluster": "prom-ecs-exporter-sandbox",
+        "com.amazonaws.ecs.container-name": "ecs-exporter",
+        "com.amazonaws.ecs.task-arn": "arn:aws:ecs:us-east-1:829490980523:task/prom-ecs-exporter-sandbox/d0b6296da9ab4519954834832299111c",
+        "com.amazonaws.ecs.task-definition-family": "prom-ecs-exporter-sandbox-isker-ec2",
+        "com.amazonaws.ecs.task-definition-version": "5"
+      },
+      "DesiredStatus": "RUNNING",
+      "KnownStatus": "RUNNING",
+      "Limits": {
+        "CPU": 256,
+        "Memory": 256
+      },
+      "CreatedAt": "2024-10-07T04:51:03.090215724Z",
+      "StartedAt": "2024-10-07T04:51:03.379102976Z",
+      "Type": "NORMAL",
+      "LogDriver": "awslogs",
+      "LogOptions": {
+        "awslogs-group": "EcsExporterCdkStack-promecsexportersandboxiskerec2taskdefinitionpromecsexportersandboxiskerec2ecsexporterLogGroup3ED3B0CC-Gw82tyY2OqMn",
+        "awslogs-region": "us-east-1",
+        "awslogs-stream": "ecs-exporter/ecs-exporter/d0b6296da9ab4519954834832299111c"
+      },
+      "ContainerARN": "arn:aws:ecs:us-east-1:829490980523:container/prom-ecs-exporter-sandbox/d0b6296da9ab4519954834832299111c/93c9e49e-a255-4be1-a808-8dd1c600470b",
+      "Networks": [
+        {
+          "NetworkMode": "host",
+          "IPv4Addresses": [
+            ""
+          ]
+        }
+      ]
+    }
+  ],
+  "VPCID": "vpc-05e9af733cbfda5fe",
+  "ServiceName": "prom-ecs-exporter-sandbox-isker-ec2"
+}

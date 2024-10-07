@@ -1,0 +1,89 @@
+{
+  "a0ad61dee95c0835e657498fb5063576e22347f17acb0e89811c29efa796e853": {
+    "read": "2024-10-07T04:53:11.654232564Z",
+    "preread": "2024-10-07T04:53:10.652343873Z",
+    "pids_stats": {
+      "current": 5,
+      "limit": 406
+    },
+    "blkio_stats": {
+      "io_service_bytes_recursive": null,
+      "io_serviced_recursive": null,
+      "io_queue_recursive": null,
+      "io_service_time_recursive": null,
+      "io_wait_time_recursive": null,
+      "io_merged_recursive": null,
+      "io_time_recursive": null,
+      "sectors_recursive": null
+    },
+    "num_procs": 0,
+    "storage_stats": {},
+    "cpu_stats": {
+      "cpu_usage": {
+        "total_usage": 25334000,
+        "usage_in_kernelmode": 25334000,
+        "usage_in_usermode": 0
+      },
+      "system_cpu_usage": 4874060000000,
+      "online_cpus": 2,
+      "throttling_data": {
+        "periods": 0,
+        "throttled_periods": 0,
+        "throttled_time": 0
+      }
+    },
+    "precpu_stats": {
+      "cpu_usage": {
+        "total_usage": 25334000,
+        "usage_in_kernelmode": 25334000,
+        "usage_in_usermode": 0
+      },
+      "system_cpu_usage": 4872050000000,
+      "online_cpus": 2,
+      "throttling_data": {
+        "periods": 0,
+        "throttled_periods": 0,
+        "throttled_time": 0
+      }
+    },
+    "memory_stats": {
+      "usage": 4452352,
+      "stats": {
+        "active_anon": 4096,
+        "active_file": 0,
+        "anon": 4079616,
+        "anon_thp": 0,
+        "file": 0,
+        "file_dirty": 0,
+        "file_mapped": 0,
+        "file_writeback": 0,
+        "inactive_anon": 4075520,
+        "inactive_file": 0,
+        "kernel_stack": 81920,
+        "pgactivate": 0,
+        "pgdeactivate": 0,
+        "pgfault": 2554,
+        "pglazyfree": 0,
+        "pglazyfreed": 0,
+        "pgmajfault": 0,
+        "pgrefill": 0,
+        "pgscan": 0,
+        "pgsteal": 0,
+        "shmem": 0,
+        "slab": 156784,
+        "slab_reclaimable": 62448,
+        "slab_unreclaimable": 94336,
+        "sock": 0,
+        "thp_collapse_alloc": 0,
+        "thp_fault_alloc": 0,
+        "unevictable": 0,
+        "workingset_activate": 0,
+        "workingset_nodereclaim": 0,
+        "workingset_refault": 0
+      },
+      "limit": 268435456
+    },
+    "name": "/ecs-prom-ecs-exporter-sandbox-isker-ec2-5-ecs-exporter-f48b8ba3e98eae890300",
+    "id": "a0ad61dee95c0835e657498fb5063576e22347f17acb0e89811c29efa796e853"
+  }
+}

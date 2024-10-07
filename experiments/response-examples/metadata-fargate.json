@@ -1,0 +1,76 @@
+{
+  "Cluster": "arn:aws:ecs:us-east-1:829490980523:cluster/prom-ecs-exporter-sandbox",
+  "TaskARN": "arn:aws:ecs:us-east-1:829490980523:task/prom-ecs-exporter-sandbox/e5bbdcd1cbd54d56b49a34084200ccd5",
+  "Family": "prom-ecs-exporter-sandbox-isker-fargate",
+  "Revision": "4",
+  "DesiredStatus": "RUNNING",
+  "KnownStatus": "RUNNING",
+  "Limits": {
+    "CPU": 0.25,
+    "Memory": 512
+  },
+  "PullStartedAt": "2024-10-07T04:35:24.104694138Z",
+  "PullStoppedAt": "2024-10-07T04:35:25.898478987Z",
+  "AvailabilityZone": "us-east-1a",
+  "LaunchType": "FARGATE",
+  "Containers": [
+    {
+      "DockerId": "e5bbdcd1cbd54d56b49a34084200ccd5-4159844948",
+      "Name": "ecs-exporter",
+      "DockerName": "ecs-exporter",
+      "Image": "829490980523.dkr.ecr.us-east-1.amazonaws.com/cdk-hnb659fds-container-assets-829490980523-us-east-1:c0d5c0d463c2632d80bf4ce80424b19ffde45d1ccf3b2727886ed0111c20478e",
+      "ImageID": "sha256:f6b9216a594c40393dffc6546c867136203dccbb0bbbecc602d8629c65527471",
+      "Labels": {
+        "com.amazonaws.ecs.cluster": "arn:aws:ecs:us-east-1:829490980523:cluster/prom-ecs-exporter-sandbox",
+        "com.amazonaws.ecs.container-name": "ecs-exporter",
+        "com.amazonaws.ecs.task-arn": "arn:aws:ecs:us-east-1:829490980523:task/prom-ecs-exporter-sandbox/e5bbdcd1cbd54d56b49a34084200ccd5",
+        "com.amazonaws.ecs.task-definition-family": "prom-ecs-exporter-sandbox-isker-fargate",
+        "com.amazonaws.ecs.task-definition-version": "4"
+      },
+      "DesiredStatus": "RUNNING",
+      "KnownStatus": "RUNNING",
+      "Limits": {
+        "CPU": 2
+      },
+      "CreatedAt": "2024-10-07T04:35:26.462355956Z",
+      "StartedAt": "2024-10-07T04:35:26.462355956Z",
+      "Type": "NORMAL",
+      "LogDriver": "awslogs",
+      "LogOptions": {
+        "awslogs-group": "EcsExporterCdkStack-promecsexportersandboxiskerfargatetaskdefinitionpromecsexportersandboxiskerfargateecsexporterLogGroupA7F542AF-DFXvV7YkZGdA",
+        "awslogs-region": "us-east-1",
+        "awslogs-stream": "ecs-exporter/ecs-exporter/e5bbdcd1cbd54d56b49a34084200ccd5"
+      },
+      "ContainerARN": "arn:aws:ecs:us-east-1:829490980523:container/prom-ecs-exporter-sandbox/e5bbdcd1cbd54d56b49a34084200ccd5/9cd0bdcd-8125-4a39-bc42-f7349a2bbce1",
+      "Networks": [
+        {
+          "NetworkMode": "awsvpc",
+          "IPv4Addresses": [
+            "10.0.192.121"
+          ],
+          "AttachmentIndex": 0,
+          "MACAddress": "0a:ff:ed:75:10:39",
+          "IPv4SubnetCIDRBlock": "10.0.0.0/16",
+          "DomainNameServers": [
+            "10.0.0.2"
+          ],
+          "DomainNameSearchList": [
+            "ec2.internal"
+          ],
+          "PrivateDNSName": "ip-10-0-192-121.ec2.internal",
+          "SubnetGatewayIpv4Address": "10.0.0.1/16"
+        }
+      ],
+      "Snapshotter": "overlayfs"
+    }
+  ],
+  "ClockDrift": {
+    "ClockErrorBound": 0.508088,
+    "ReferenceTimestamp": "2024-10-07T04:37:31Z",
+    "ClockSynchronizationStatus": "SYNCHRONIZED"
+  },
+  "EphemeralStorageMetrics": {
+    "Utilized": 32,
+    "Reserved": 20496
+  }
+}

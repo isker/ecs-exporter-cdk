@@ -10,6 +10,7 @@ import {
   AsgCapacityProvider,
   AwsLogDriver,
   Cluster,
+  ContainerDefinitionOptions,
   ContainerImage,
   CpuArchitecture,
   Ec2Service,
@@ -32,21 +33,29 @@ export class EcsExporterCdkStack extends Stack {
 
     // Image variants to deploy. You can deploy multiple variants to compare
     // them side-by-side. Each variant gets a task on Fargate and a task on EC2.
-    const variants: ReadonlyArray<{ variant: string; image: ContainerImage }> =
-      [
-        {
-          variant: "main",
-          image: ContainerImage.fromRegistry(
-            "quay.io/prometheuscommunity/ecs-exporter:main",
-          ),
-        },
-        {
-          variant: "isker",
-          image: ContainerImage.fromAsset("./custom-build", {
-            platform: Platform.LINUX_ARM64,
-          }),
-        },
-      ];
+    const variants: ReadonlyArray<{
+      variant: string;
+      image: ContainerImage;
+      containerOverrides?: Partial<ContainerDefinitionOptions>;
+    }> = [
+      // {
+      //   variant: "main",
+      //   image: ContainerImage.fromRegistry(
+      //     "quay.io/prometheuscommunity/ecs-exporter:main",
+      //   ),
+      // },
+      {
+        variant: "isker",
+        image: ContainerImage.fromAsset("./custom-build", {
+          platform: Platform.LINUX_ARM64,
+          buildArgs: {
+            SOURCE:
+              "https://github.com/isker/ecs_exporter.git#4d8557e5afae1ec6fe36e41c871feda1ea470773",
+          },
+        }),
+        containerOverrides: { command: ["--verbose"] },
+      },
+    ];
 
     // The VPC matters for tasks on EC2 instances. Create one that only has a
     // public subnet and no NAT gateways to simplify/encheapen things.
@@ -73,7 +82,7 @@ export class EcsExporterCdkStack extends Stack {
       autoScalingGroupName: resourceName,
       instanceType: new InstanceType("t4g.nano"),
       machineImage: EcsOptimizedImage.amazonLinux2023(AmiHardwareType.ARM),
-      minCapacity: variants.length,
+      minCapacity: 0,
       maxCapacity: 2 * variants.length,
       blockDevices: [
         { deviceName: "/dev/xvda", volume: BlockDeviceVolume.ebs(40) },
@@ -89,7 +98,7 @@ export class EcsExporterCdkStack extends Stack {
     });
     cluster.addAsgCapacityProvider(capacityProvider);
 
-    variants.forEach(({ variant, image }) => {
+    variants.forEach(({ variant, image, containerOverrides }) => {
       {
         // Create an EC2 task.
         const name = `${resourceName}-${variant}-ec2`;
@@ -110,7 +119,9 @@ export class EcsExporterCdkStack extends Stack {
             streamPrefix: "ecs-exporter",
           }),
           memoryReservationMiB: 128,
+          memoryLimitMiB: 256,
           cpu: 256,
+          ...containerOverrides,
         });
 
         new Ec2Service(this, `${name}-service`, {
@@ -150,6 +161,7 @@ export class EcsExporterCdkStack extends Stack {
             logRetention: RetentionDays.ONE_DAY,
             streamPrefix: "ecs-exporter",
           }),
+          ...containerOverrides,
         });
 
         const service = new FargateService(this, `${name}-service`, {
