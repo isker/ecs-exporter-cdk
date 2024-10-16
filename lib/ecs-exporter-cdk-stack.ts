@@ -38,22 +38,21 @@ export class EcsExporterCdkStack extends Stack {
       image: ContainerImage;
       containerOverrides?: Partial<ContainerDefinitionOptions>;
     }> = [
-      // {
-      //   variant: "main",
-      //   image: ContainerImage.fromRegistry(
-      //     "quay.io/prometheuscommunity/ecs-exporter:main",
-      //   ),
-      // },
+      {
+        variant: "main",
+        image: ContainerImage.fromRegistry(
+          "quay.io/prometheuscommunity/ecs-exporter:main",
+        ),
+      },
       {
         variant: "isker",
         image: ContainerImage.fromAsset("./custom-build", {
           platform: Platform.LINUX_ARM64,
           buildArgs: {
             SOURCE:
-              "https://github.com/isker/ecs_exporter.git#4d8557e5afae1ec6fe36e41c871feda1ea470773",
+              "https://github.com/isker/ecs_exporter.git#14b73afc2d7a9ce96a50ebb1f4126d08ff290c74",
           },
         }),
-        containerOverrides: { command: ["--verbose"] },
       },
     ];
 
@@ -113,6 +112,7 @@ export class EcsExporterCdkStack extends Stack {
         taskDefinition.addContainer(`${name}-ecs-exporter`, {
           containerName: "ecs-exporter",
           image,
+          command: ["--log.format=json", "--log.level=debug"],
           portMappings: [{ containerPort: 9779 }],
           logging: new AwsLogDriver({
             logRetention: RetentionDays.ONE_DAY,
@@ -156,6 +156,7 @@ export class EcsExporterCdkStack extends Stack {
         taskDefinition.addContainer(`${name}-ecs-exporter`, {
           containerName: "ecs-exporter",
           image,
+          command: ["--log.format=json", "--log.level=debug"],
           portMappings: [{ containerPort: 9779 }],
           logging: new AwsLogDriver({
             logRetention: RetentionDays.ONE_DAY,

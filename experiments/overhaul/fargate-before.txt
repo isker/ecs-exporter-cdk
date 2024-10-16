@@ -1,0 +1,177 @@
+# HELP ecs_cpu_seconds_total Total CPU usage in seconds.
+# TYPE ecs_cpu_seconds_total counter
+ecs_cpu_seconds_total{container="ecs-exporter",cpu="0"} 0.008221247
+ecs_cpu_seconds_total{container="ecs-exporter",cpu="1"} 0.023490622
+# HELP ecs_exporter_build_info A metric with a constant '1' value labeled by version, revision, branch, goversion from which ecs_exporter was built, and the goos and goarch for the build.
+# TYPE ecs_exporter_build_info gauge
+ecs_exporter_build_info{branch="main",goarch="arm64",goos="linux",goversion="go1.23.2",revision="67ebe7a44f30445ebab5a807ef2d021dfbb2e59a",tags="unknown",version="0.3.0"} 1
+# HELP ecs_memory_bytes Memory usage in bytes.
+# TYPE ecs_memory_bytes gauge
+ecs_memory_bytes{container="ecs-exporter"} 5.451776e+06
+# HELP ecs_memory_cache_usage Memory cache usage in bytes.
+# TYPE ecs_memory_cache_usage gauge
+ecs_memory_cache_usage{container="ecs-exporter"} 0
+# HELP ecs_memory_limit_bytes Memory limit in bytes.
+# TYPE ecs_memory_limit_bytes gauge
+ecs_memory_limit_bytes{container="ecs-exporter"} 9.223372036854772e+18
+# HELP ecs_metadata_info ECS service metadata.
+# TYPE ecs_metadata_info gauge
+ecs_metadata_info{availability_zone="us-east-1a",cluster="arn:aws:ecs:us-east-1:829490980523:cluster/prom-ecs-exporter-sandbox",desired_status="RUNNING",family="prom-ecs-exporter-sandbox-main-fargate",known_status="RUNNING",launch_type="FARGATE",pull_started_at="2024-10-16T22:22:44.68654208Z",pull_stopped_at="2024-10-16T22:22:47.706368109Z",revision="4",task_arn="arn:aws:ecs:us-east-1:829490980523:task/prom-ecs-exporter-sandbox/0d7fff3f3e0f4cebab2b49b242ba51fd"} 1
+# HELP ecs_network_receive_bytes_total Network received in bytes.
+# TYPE ecs_network_receive_bytes_total counter
+ecs_network_receive_bytes_total{container="ecs-exporter",device="eth1"} 1.1668798e+07
+# HELP ecs_network_receive_dropped_total Network packets dropped in receiving.
+# TYPE ecs_network_receive_dropped_total counter
+ecs_network_receive_dropped_total{container="ecs-exporter",device="eth1"} 0
+# HELP ecs_network_receive_errors_total Network errors in receiving.
+# TYPE ecs_network_receive_errors_total counter
+ecs_network_receive_errors_total{container="ecs-exporter",device="eth1"} 0
+# HELP ecs_network_receive_packets_total Network packets received.
+# TYPE ecs_network_receive_packets_total counter
+ecs_network_receive_packets_total{container="ecs-exporter",device="eth1"} 8133
+# HELP ecs_network_transmit_bytes_total Network transmitted in bytes.
+# TYPE ecs_network_transmit_bytes_total counter
+ecs_network_transmit_bytes_total{container="ecs-exporter",device="eth1"} 53149
+# HELP ecs_network_transmit_dropped_total Network packets dropped in transmit.
+# TYPE ecs_network_transmit_dropped_total counter
+ecs_network_transmit_dropped_total{container="ecs-exporter",device="eth1"} 0
+# HELP ecs_network_transmit_errors_total Network errors in transmit.
+# TYPE ecs_network_transmit_errors_total counter
+ecs_network_transmit_errors_total{container="ecs-exporter",device="eth1"} 0
+# HELP ecs_network_transmit_packets_total Network packets transmitted.
+# TYPE ecs_network_transmit_packets_total counter
+ecs_network_transmit_packets_total{container="ecs-exporter",device="eth1"} 646
+# HELP ecs_svc_cpu_limit Total CPU Limit.
+# TYPE ecs_svc_cpu_limit gauge
+ecs_svc_cpu_limit{task_arn="arn:aws:ecs:us-east-1:829490980523:task/prom-ecs-exporter-sandbox/0d7fff3f3e0f4cebab2b49b242ba51fd"} 0.25
+# HELP ecs_svc_memory_limit_bytes Total MEM Limit in bytes.
+# TYPE ecs_svc_memory_limit_bytes gauge
+ecs_svc_memory_limit_bytes{task_arn="arn:aws:ecs:us-east-1:829490980523:task/prom-ecs-exporter-sandbox/0d7fff3f3e0f4cebab2b49b242ba51fd"} 512
+# HELP go_gc_duration_seconds A summary of the wall-time pause (stop-the-world) duration in garbage collection cycles.
+# TYPE go_gc_duration_seconds summary
+go_gc_duration_seconds{quantile="0"} 2.6536e-05
+go_gc_duration_seconds{quantile="0.25"} 2.6536e-05
+go_gc_duration_seconds{quantile="0.5"} 0.000112018
+go_gc_duration_seconds{quantile="0.75"} 0.033694052
+go_gc_duration_seconds{quantile="1"} 0.033694052
+go_gc_duration_seconds_sum 0.033832606
+go_gc_duration_seconds_count 3
+# HELP go_gc_gogc_percent Heap size target percentage configured by the user, otherwise 100. This value is set by the GOGC environment variable, and the runtime/debug.SetGCPercent function. Sourced from /gc/gogc:percent
+# TYPE go_gc_gogc_percent gauge
+go_gc_gogc_percent 100
+# HELP go_gc_gomemlimit_bytes Go runtime memory limit configured by the user, otherwise math.MaxInt64. This value is set by the GOMEMLIMIT environment variable, and the runtime/debug.SetMemoryLimit function. Sourced from /gc/gomemlimit:bytes
+# TYPE go_gc_gomemlimit_bytes gauge
+go_gc_gomemlimit_bytes 9.223372036854776e+18
+# HELP go_goroutines Number of goroutines that currently exist.
+# TYPE go_goroutines gauge
+go_goroutines 12
+# HELP go_info Information about the Go environment.
+# TYPE go_info gauge
+go_info{version="go1.23.2"} 1
+# HELP go_memstats_alloc_bytes Number of bytes allocated in heap and currently in use. Equals to /memory/classes/heap/objects:bytes.
+# TYPE go_memstats_alloc_bytes gauge
+go_memstats_alloc_bytes 2.576136e+06
+# HELP go_memstats_alloc_bytes_total Total number of bytes allocated in heap until now, even if released already. Equals to /gc/heap/allocs:bytes.
+# TYPE go_memstats_alloc_bytes_total counter
+go_memstats_alloc_bytes_total 2.990496e+06
+# HELP go_memstats_buck_hash_sys_bytes Number of bytes used by the profiling bucket hash table. Equals to /memory/classes/profiling/buckets:bytes.
+# TYPE go_memstats_buck_hash_sys_bytes gauge
+go_memstats_buck_hash_sys_bytes 4773
+# HELP go_memstats_frees_total Total number of heap objects frees. Equals to /gc/heap/frees:objects + /gc/heap/tiny/allocs:objects.
+# TYPE go_memstats_frees_total counter
+go_memstats_frees_total 3506
+# HELP go_memstats_gc_sys_bytes Number of bytes used for garbage collection system metadata. Equals to /memory/classes/metadata/other:bytes.
+# TYPE go_memstats_gc_sys_bytes gauge
+go_memstats_gc_sys_bytes 2.579768e+06
+# HELP go_memstats_heap_alloc_bytes Number of heap bytes allocated and currently in use, same as go_memstats_alloc_bytes. Equals to /memory/classes/heap/objects:bytes.
+# TYPE go_memstats_heap_alloc_bytes gauge
+go_memstats_heap_alloc_bytes 2.576136e+06
+# HELP go_memstats_heap_idle_bytes Number of heap bytes waiting to be used. Equals to /memory/classes/heap/released:bytes + /memory/classes/heap/free:bytes.
+# TYPE go_memstats_heap_idle_bytes gauge
+go_memstats_heap_idle_bytes 4.096e+06
+# HELP go_memstats_heap_inuse_bytes Number of heap bytes that are in use. Equals to /memory/classes/heap/objects:bytes + /memory/classes/heap/unused:bytes
+# TYPE go_memstats_heap_inuse_bytes gauge
+go_memstats_heap_inuse_bytes 3.76832e+06
+# HELP go_memstats_heap_objects Number of currently allocated objects. Equals to /gc/heap/objects:objects.
+# TYPE go_memstats_heap_objects gauge
+go_memstats_heap_objects 14074
+# HELP go_memstats_heap_released_bytes Number of heap bytes released to OS. Equals to /memory/classes/heap/released:bytes.
+# TYPE go_memstats_heap_released_bytes gauge
+go_memstats_heap_released_bytes 3.702784e+06
+# HELP go_memstats_heap_sys_bytes Number of heap bytes obtained from system. Equals to /memory/classes/heap/objects:bytes + /memory/classes/heap/unused:bytes + /memory/classes/heap/released:bytes + /memory/classes/heap/free:bytes.
+# TYPE go_memstats_heap_sys_bytes gauge
+go_memstats_heap_sys_bytes 7.86432e+06
+# HELP go_memstats_last_gc_time_seconds Number of seconds since 1970 of last garbage collection.
+# TYPE go_memstats_last_gc_time_seconds gauge
+go_memstats_last_gc_time_seconds 1.7291176210341942e+09
+# HELP go_memstats_mallocs_total Total number of heap objects allocated, both live and gc-ed. Semantically a counter version for go_memstats_heap_objects gauge. Equals to /gc/heap/allocs:objects + /gc/heap/tiny/allocs:objects.
+# TYPE go_memstats_mallocs_total counter
+go_memstats_mallocs_total 17580
+# HELP go_memstats_mcache_inuse_bytes Number of bytes in use by mcache structures. Equals to /memory/classes/metadata/mcache/inuse:bytes.
+# TYPE go_memstats_mcache_inuse_bytes gauge
+go_memstats_mcache_inuse_bytes 2400
+# HELP go_memstats_mcache_sys_bytes Number of bytes used for mcache structures obtained from system. Equals to /memory/classes/metadata/mcache/inuse:bytes + /memory/classes/metadata/mcache/free:bytes.
+# TYPE go_memstats_mcache_sys_bytes gauge
+go_memstats_mcache_sys_bytes 15600
+# HELP go_memstats_mspan_inuse_bytes Number of bytes in use by mspan structures. Equals to /memory/classes/metadata/mspan/inuse:bytes.
+# TYPE go_memstats_mspan_inuse_bytes gauge
+go_memstats_mspan_inuse_bytes 74720
+# HELP go_memstats_mspan_sys_bytes Number of bytes used for mspan structures obtained from system. Equals to /memory/classes/metadata/mspan/inuse:bytes + /memory/classes/metadata/mspan/free:bytes.
+# TYPE go_memstats_mspan_sys_bytes gauge
+go_memstats_mspan_sys_bytes 81600
+# HELP go_memstats_next_gc_bytes Number of heap bytes when next garbage collection will take place. Equals to /gc/heap/goal:bytes.
+# TYPE go_memstats_next_gc_bytes gauge
+go_memstats_next_gc_bytes 5.432992e+06
+# HELP go_memstats_other_sys_bytes Number of bytes used for other system allocations. Equals to /memory/classes/other:bytes.
+# TYPE go_memstats_other_sys_bytes gauge
+go_memstats_other_sys_bytes 684163
+# HELP go_memstats_stack_inuse_bytes Number of bytes obtained from system for stack allocator in non-CGO environments. Equals to /memory/classes/heap/stacks:bytes.
+# TYPE go_memstats_stack_inuse_bytes gauge
+go_memstats_stack_inuse_bytes 524288
+# HELP go_memstats_stack_sys_bytes Number of bytes obtained from system for stack allocator. Equals to /memory/classes/heap/stacks:bytes + /memory/classes/os-stacks:bytes.
+# TYPE go_memstats_stack_sys_bytes gauge
+go_memstats_stack_sys_bytes 524288
+# HELP go_memstats_sys_bytes Number of bytes obtained from system. Equals to /memory/classes/total:byte.
+# TYPE go_memstats_sys_bytes gauge
+go_memstats_sys_bytes 1.1754512e+07
+# HELP go_sched_gomaxprocs_threads The current runtime.GOMAXPROCS setting, or the number of operating system threads that can execute user-level Go code simultaneously. Sourced from /sched/gomaxprocs:threads
+# TYPE go_sched_gomaxprocs_threads gauge
+go_sched_gomaxprocs_threads 2
+# HELP go_threads Number of OS threads created.
+# TYPE go_threads gauge
+go_threads 6
+# HELP process_cpu_seconds_total Total user and system CPU time spent in seconds.
+# TYPE process_cpu_seconds_total counter
+process_cpu_seconds_total 0.03
+# HELP process_max_fds Maximum number of open file descriptors.
+# TYPE process_max_fds gauge
+process_max_fds 65535
+# HELP process_network_receive_bytes_total Number of bytes received by the process over the network.
+# TYPE process_network_receive_bytes_total counter
+process_network_receive_bytes_total 1.1389072e+07
+# HELP process_network_transmit_bytes_total Number of bytes sent by the process over the network.
+# TYPE process_network_transmit_bytes_total counter
+process_network_transmit_bytes_total 44001
+# HELP process_open_fds Number of open file descriptors.
+# TYPE process_open_fds gauge
+process_open_fds 9
+# HELP process_resident_memory_bytes Resident memory size in bytes.
+# TYPE process_resident_memory_bytes gauge
+process_resident_memory_bytes 1.7084416e+07
+# HELP process_start_time_seconds Start time of the process since unix epoch in seconds.
+# TYPE process_start_time_seconds gauge
+process_start_time_seconds 1.72911736843e+09
+# HELP process_virtual_memory_bytes Virtual memory size in bytes.
+# TYPE process_virtual_memory_bytes gauge
+process_virtual_memory_bytes 1.27039488e+09
+# HELP process_virtual_memory_max_bytes Maximum amount of virtual memory available in bytes.
+# TYPE process_virtual_memory_max_bytes gauge
+process_virtual_memory_max_bytes 1.8446744073709552e+19
+# HELP promhttp_metric_handler_requests_in_flight Current number of scrapes being served.
+# TYPE promhttp_metric_handler_requests_in_flight gauge
+promhttp_metric_handler_requests_in_flight 1
+# HELP promhttp_metric_handler_requests_total Total number of scrapes by HTTP status code.
+# TYPE promhttp_metric_handler_requests_total counter
+promhttp_metric_handler_requests_total{code="200"} 0
+promhttp_metric_handler_requests_total{code="500"} 0
+promhttp_metric_handler_requests_total{code="503"} 0
